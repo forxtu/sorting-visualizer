@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 // hooks
-import useControls from "features/sorting/hooks/useControls";
+import useSort from "features/sorting/hooks/useSort";
 
 // components
 import Button from "components/elements/Button";
@@ -17,14 +17,14 @@ const Wrapper = styled.div`
 
 const SortWrapper = styled.div``;
 
-const Controls = ({ generateNewArray }) => {
+const Controls = ({ generateNewArray, arrayOfNumbers, setArrayOfNumbers }) => {
   const {
     handleMergeSort,
     handleBubbleSort,
     handleQuickSort,
     handleSelectionSort,
     handleHeapSort
-  } = useControls();
+  } = useSort({ arrayOfNumbers, setArrayOfNumbers });
 
   return (
     <Wrapper>

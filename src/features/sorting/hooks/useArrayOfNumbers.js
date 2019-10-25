@@ -16,6 +16,7 @@ const useArrayOfNumbers = () => {
 
   return {
     arrayOfNumbers,
+    setArrayOfNumbers,
     generateNewArray
   };
 };
